@@ -14,15 +14,15 @@
         <span class="mr-2">Downloads Archive</span>
       </v-btn>
     </v-app-bar>
-    <v-content>
+    <v-content class="spiffybg">
       <v-tabs grow>
         <v-tab key="wii">Wii</v-tab>
         <v-tab disabled>Xbox (Coming Later)</v-tab>
         <v-tab disabled>PS3 (RIP)</v-tab>
 
-        <v-tab-item key="wii" class="tab-item">
+        <v-tab-item key="wii" class="spiffybg">
           <v-select
-            outlined
+            solo
             :items="wii_items"
             label="Software"
             v-model="wii_value"
@@ -91,5 +91,8 @@ export default {
 <style scoped>
   .tab-item {
     background: #303030;
+  }
+  .spiffybg {
+    background: url('/background.jpg');
   }
 </style>
