@@ -33,7 +33,7 @@
               <div>
                 <v-container>
                   <v-row>
-                    <v-col cols="12" md="auto" style="min-width: 50%;" >
+                    <v-col cols="12" md="auto" style="min-width: 50%;" align-self="center">
                       <v-img aspect-ratio='1.7' contain :src="`/img/${theme.id}.jpg`"/>
                     </v-col>
                     <v-col cols="12" md="auto">
