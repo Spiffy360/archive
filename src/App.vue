@@ -28,6 +28,7 @@
             v-model="wii_value"
             class="mt-6 mx-12"
           />
+          <p v-if="themes.length === 0">Loading...</p>
           <div v-for="(theme, i) in themes" v-bind:key="i">
             <v-card shaped class="mb-8 mx-4" v-if="theme.software === wii_value">
               <div>
@@ -67,11 +68,13 @@
 
 <script>
 import themes from '@/assets/meta.json'
+import firstBy from 'thenby'
 
 export default {
   name: 'App',
   data: () => ({
-    themes: [...themes].reverse(),
+    firstBy,
+    themes: [],
     wii_items: [
       'USB Loader GX',
       'WiiFlow',
@@ -84,7 +87,12 @@ export default {
       'WiiMC'
     ],
     wii_value: 'USB Loader GX'
-  })
+  }),
+  mounted () {
+    process.nextTick(() => {
+      this.themes = [...themes].reverse().sort(firstBy(theme => theme.votes * theme.rating, -1).thenBy('name'))
+    })
+  }
 }
 </script>
 
