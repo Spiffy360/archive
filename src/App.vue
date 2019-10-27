@@ -6,13 +6,12 @@
         <span class="font-weight-light">Archive</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
+      <v-btn text href="https://rc24.xyz/goodies/themes/" target="_blank">More Themes</v-btn>
       <v-btn
         text
         href="https://archive.org/download/spiffy360_wii_downloads"
         target="_blank"
-      >
-        <span class="mr-2">Downloads Archive</span>
-      </v-btn>
+      >Downloads Archive</v-btn>
     </v-app-bar>
     <v-content class="spiffybg">
       <v-tabs grow>
