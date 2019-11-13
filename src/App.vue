@@ -27,9 +27,15 @@
             v-model="wii_value"
             class="mt-6 mx-12"
           />
+          <v-text-field
+            solo
+            label="Search"
+            v-model="wii_search"
+            class="mx-12"
+          ></v-text-field>
           <p v-if="themes.length === 0">Loading...</p>
           <div v-for="(theme, i) in themes" v-bind:key="i">
-            <v-card shaped class="mb-8 mx-4" v-if="theme.software === wii_value">
+            <v-card shaped class="mb-8 mx-4" v-if="theme.software === wii_value && theme.name.toLowerCase().includes(wii_search.toLowerCase())">
               <div>
                 <v-container>
                   <v-row>
@@ -85,7 +91,8 @@ export default {
       'Save Game GX',
       'WiiMC'
     ],
-    wii_value: 'USB Loader GX'
+    wii_value: 'USB Loader GX',
+    wii_search: ''
   }),
   mounted () {
     process.nextTick(() => {
