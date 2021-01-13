@@ -16,8 +16,6 @@
     <v-content class="spiffybg">
       <v-tabs grow>
         <v-tab key="wii">Wii</v-tab>
-        <v-tab disabled>Xbox (Coming Later)</v-tab>
-        <v-tab disabled>PS3 (RIP)</v-tab>
 
         <v-tab-item key="wii" class="spiffybg">
           <v-select
