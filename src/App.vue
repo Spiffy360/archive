@@ -56,7 +56,7 @@
                       </div>
                       <span v-else>No votes</span>
                       <br><br>
-                      <v-btn :href="`https://archive.org/download/spiffy360_wii_downloads/wii_${theme.id}.zip`">Download</v-btn>
+                      <v-btn :href="`${theme.url}`">Download</v-btn>
                     </v-col>
                   </v-row>
                 </v-container>
