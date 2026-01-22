@@ -6,7 +6,7 @@
         <span class="font-weight-light">Archive</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn text href="http://wii.hacks.guide/themes" target="More"></v-btn>
+      <v-btn text href="http://wii.hacks.guide/themes" target="_blank">More</v-btn>
       <v-btn
         text
         href="http://archive.org/download/spiffy360_wii_downloads/"
