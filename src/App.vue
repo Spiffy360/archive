@@ -93,7 +93,7 @@ export default {
     wii_search: ''
   }),
   mounted () {
-    process.nextTick(() => {
+    this.$nextTick(() => {
       this.themes = [...themes].reverse().sort(firstBy(theme => theme.votes * theme.rating, -1).thenBy('name'))
     })
   }
