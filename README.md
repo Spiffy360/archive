@@ -20,5 +20,8 @@ npm run build
 npm run lint
 ```
 
+### Notes
+The build and dev scripts set `NODE_OPTIONS=--openssl-legacy-provider` to keep webpack 4 compatible with newer Node.js releases.
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
